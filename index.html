@@ -1,7 +1,53 @@
 <html>
-    <body>
+    <style>
+        h1 {
+            color:blueviolet;
+        }
+        .bigass-button{
+            padding:69px;
+        }
+        #meter{
+            filter: hue-rotate(180deg);
+        }
+        .blue-background{
+            background:blue;
+        }
+        .red-background{
+            background:red;
+        }
+    </style>
+    <body id="body">
+        <button class="bigass-button" id="button"> 
+
+            dingdangdong
+        </button>
         <h1>
+          
             blibalblub
         </h1>
+        <meter min="0" max="100" low="59" high="90" optimum="90" value="50" id="meter">
+            50%
+        </meter>
     </body>
+    <script>
+        //button-o-meter
+        var toggle=true
+        var button=document.querySelector("#button")
+        //listen to clicks
+        button.onclick=function(){
+        var body=document.querySelector("#body")
+        
+        if(toggle === true){
+            body.classList.add("red-background")
+            body.classList.remove("blue-background")
+        }
+        else{
+            body.classList.add("blue-background")
+            body.classList.remove("red-background")
+        }
+        toggle=!toggle
+        }
+        //on click > cahnge background colour
+        
+    </script>
 </html>
